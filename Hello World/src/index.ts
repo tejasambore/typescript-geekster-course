@@ -1,59 +1,69 @@
-// console.log("Hello World..!");
-
-// let courseName:string = "TypeScript";
-// let numbers:number = 12345567;
+// let courseName: string = "typescript";
+// let numbers:number = 7498263185;
 // let isAdmin:boolean = true;
 // let value;
-// value = 1;
+// value = 123;
+// value = "a";
+// value = false;
 
-// Declaring an Array:
-let arr:number[] = [1, 3, 5, 6, 7, 9];
-// let arr = [1, 2, 3, 4, true]
-// arr.forEach(n => n.)
+// Array: in TypeScript
+// let arr = [1, true, "true"];
+let arr:number[] = [1, 2, 3, 4, 5];      // Array of numbr data type
+// let lang:string[] = ["typescript", 'javascript', "python"];
 
-arr[2] = 20;
-console.log(arr);
+// arr[0];
+// arr[1];
+// arr[2] = 20;
+// console.log(arr);
+
 
 // Tuple:
-let user:[number, string, boolean] = [1, "John", true];
-console.log(user[0]); // 1
-console.log(user[1]); // John   
-console.log(user[2]); // true
+// let user:[number, string, boolean] = [12, "Akhil Sharma", true];
+// console.log(user[0]); // 12
+// console.log(user[1]); // Akhil Sharma
+// console.log(user[2]); // true
+// user[2].
 
-// enum
-// const amar = 1;
-// const akbar = 2;
-// const anthony = 3;
 
-const enum movie {amar = 3, akbar = 4, anthony = 5};
+// enum:
+// enum movie {amar = 3, akbar = 4, enthiny = 5};
+// let movieCharacter: movie = movie.akbar;
+// console.log(movieCharacter);
 
-let movieCharacter: movie = movie.amar;
-console.log(movieCharacter); // 3
+// // function:
+// function sum (a:number):number {
+//     return a;
+// }
 
-// function:
-function sum(a:number, b:number):number {
-    // let res = 20;    // unusedLocalVariable
+// function sum (a:number, b:number):number {
+//     return a+b;
+// }
+ 
+// let num = sum(5);
+// let num = sum(5, 6);
+// console.log(num);
 
-    if (a < 10) return a*2;
-    return a+b;
-}
 
-sum(4, 5);
+// Object:
+let user: {
+    name: string;
+    age: number;
+    isAdmin: boolean;
+    readonly marks: number;
 
-let student: { 
-    name:string, 
-    age:number, 
-    course:string, 
-    readonly marks:number 
-    printName:(name: string) => void;
-} = { 
-    name: "Akhil Sharma", 
-    age:22, 
-    course: "BE", 
-    marks:87,
-    printName: (name: string) => console.log(`Name: ${name}`),
+    // method:
+    printName: (name: string) => void;
+} = {
+    name: "Akhil Sharma",
+    age: 24,
+    isAdmin: true,
+    marks: 100,
+    // method implementation:
+    printName(name) {
+        console.log(name);
+    },
 };
 
-console.log("Student: ", student);
-student.name = "Akhil";
-// student.marks = 90;  // Error: Cannot assign to 'marks' because it is a read-only property.
+// user.printName(user.name);
+
+// user.marks = 200; // Error: Cannot assign to 'marks' because it is a read-only property.
